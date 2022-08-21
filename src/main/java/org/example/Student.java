@@ -4,30 +4,18 @@ package org.example;
  * This class is responsible for tracking students including
  * name, student ID, and the amount of tuition the student owes the school.
  */
-public class Student {
-    private final String name;
-    private final int studentId;
+public class Student extends Person{
     private double tuitionOwed;
 
     /**
      * To create a new Student object by initializing value
      * Student tuition is $10,000 per year
      * @param name name of the student.
-     * @param studentId unique ID for student. TODO: Implement unique ID.
+     * @param id unique ID for student. TODO: Implement unique ID.
      */
-    public Student(String name, int studentId) {
-        if (name == null || name.length() < 1) throw new IllegalArgumentException("Name cannot be empty.");
-        this.name = name;
-        this.studentId = studentId;
+    public Student(String name, int id) {
+        super(name, id);
         this.tuitionOwed = 10_000;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getStudentId() {
-        return studentId;
     }
 
     public double getTuitionOwed() {

@@ -27,12 +27,12 @@ class SchoolTest {
         school = new School(students, teachers);
     }
 
-    @DisplayName("Disabled test ")
+    @DisplayName("Disabled test")
     @Disabled
     @Test
     void soutStudent() {
         school.getStudents().forEach(student ->
-                System.out.println(student.getName() + ", " + student.getStudentId() + ", " + student.getTuitionOwed()));
+                System.out.println(student.getName() + ", " + student.getId() + ", " + student.getTuitionOwed()));
     }
 
     @DisplayName("Increase school's total revenue by 2000 three times")
